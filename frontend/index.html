@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicolas Neznik | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Welcome to My First Webpage!</h1>
-    <p>This is a simple HTML page hosted with GitHub Pages.</p>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Nicolas<span>.</span></div>
+    </nav>
+
+    <div class="nav-around-cube">
+      <div class="nav-left">
+        <a href="#home">// home</a>
+        <a href="#skills">// skills</a>
+      </div>
+      <div class="nav-right">
+        <a href="#experience">// experience</a>
+        <a href="#projects">// projects</a>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1>NICOLAS NEZNIK</h1>
+      <p>Software Engineer, Automation Tester & Web Developer.</p>
+    </div>
+
+    <div class="spline-wrapper">
+      <iframe 
+        src="https://my.spline.design/clonercubebinarycopy-37565e5ea827a00467c1483b99856596/" 
+        frameborder="0" 
+        width="100%" 
+        height="100%" 
+        class="spline-cube"
+        allow="autoplay; fullscreen; vr">
+      </iframe>
+    </div>
+  </header>
+
+  <section id="experience" class="left-align-section" data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Test Automation Specialist – Raiffeisen Bank International AG</h3>
+      <p><em>January 2023 – Present</em></p>
+      <ul>
+        <li>Designed and implemented automated testing frameworks using Robot Framework.</li>
+        <li>Developed and executed test scripts for web, Android, and iOS banking apps.</li>
+        <li>Collaborated with teams to ensure seamless cross-platform functionality.</li>
+        <li>Reduced testing time significantly through process optimization.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Web Developer & Marketing – Naomi s.r.o.</h3>
+      <p><em>2015 – Present</em></p>
+      <ul>
+        <li>Built and maintained company website.</li>
+        <li>Managed Facebook/Instagram marketing.</li>
+        <li>Handled customer service and communications.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="right-align-section" data-aos="fade-left">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul class="skills-list">
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>Adobe Experience Manager (AEM)</li>
+        <li>Robot Framework</li>
+        <li>Communication & Collaboration</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="left-align-section" data-aos="fade-right">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3><a href="https://kvetynaomi.sk" target="_blank">Kvetynaomi.sk</a></h3>
+      <p>Developed a modern flower shop website for Naomi s.r.o., featuring a clean design, product listings, contact form, and social media integration. Focused on user-friendly experience and mobile responsiveness.</p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
