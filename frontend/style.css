@@ -551,3 +551,28 @@ section h2 {
   display: flex;
 }
 
+.scroll-up {
+  position: absolute;
+  top: 70px; /* ⬅️ was 20px, now moved 50px down */
+  left: 20px;
+  font-size: 3rem; /* ⬅️ bigger arrow */
+  color: #38bdf8;
+  text-decoration: none;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.scroll-up:hover {
+  background: #1e293b;
+  transform: scale(1.15);
+  color: white;
+}
+#home {
+  position: absolute;
+  top: 0;
+}
+
