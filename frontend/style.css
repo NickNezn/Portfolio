@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
-  background: #bfc4e6;
-  color: white;
-  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  font-family: 'Roboto Mono', monospace;
+  background-color: black;  /* optional fallback */
 }
+
+
+
 
 .hero {
   position: relative;
@@ -55,7 +59,9 @@ body, html {
   font-size: 4.5rem;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  color: white; /* ✅ Add this line */
 }
+
 
 .hero-content p {
   font-size: 1.1rem;
@@ -272,7 +278,11 @@ section#projects::before {
 
 .skills-list {
   list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  font-weight: bold;
 }
+
 
 .skills-list li {
   font-size: 1.2rem;
@@ -355,3 +365,189 @@ section h2 {
     padding: 60px 20px;
   }
 }
+
+section {
+  min-height: 100vh;               /* 👈 Ensure section is AT LEAST full screen */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;         /* ⬆️ Vertically center the section */
+  padding: 60px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.left-align-section,
+.right-align-section {
+  padding: 0 60px;
+}
+
+.left-align-section {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.right-align-section {
+  align-items: flex-end;
+  text-align: right;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.card {
+  max-width: 600px;
+  background-color: rgba(0,0,0,0.35);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.contact-icons {
+  position: relative;
+  z-index: 3;
+  margin-top: -120px;
+  text-align: center;
+}
+
+.contact-icons {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+}
+
+.contact-icons h3 {
+  font-size: 2.2rem;
+  color: white;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.icon-row img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.5));
+  cursor: pointer;
+}
+
+.icon-row img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 14px #38bdf8);
+}
+
+.sticky-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+.sticky-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+.sticky-logo span {
+  color: #f472b6;
+}
+
+.cv-dropdown {
+  position: relative;
+  display: flex; /* 👈 NEW */
+  flex-direction: column; /* 👈 NEW */
+  align-items: flex-end;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.cv-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cv-label:hover {
+  border-bottom: 2px solid #38bdf8;
+  color: #38bdf8;
+  text-shadow: 0 0 8px #38bdf8;
+}
+
+
+.cv-icon {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.cv-label:hover .cv-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #38bdf8);
+}
+
+
+.cv-options {
+  position: absolute;
+  top: 100%; /* 👈 Exactly under the label */
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 6px 0;
+  z-index: 10;
+}
+
+
+.cv-options a {
+  color: #cbd5e1;
+  padding: 10px 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.cv-options a:hover {
+  background: #1e293b;
+  color: #38bdf8;
+}
+
+.cv-dropdown:hover .cv-options,
+.cv-options:hover {
+  display: flex;
+}
+
