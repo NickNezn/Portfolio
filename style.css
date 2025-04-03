@@ -118,9 +118,9 @@ section {
 }
 @media (max-width: 768px) {
   .hero-content {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     padding: 0 20px;
+    text-align: center;
   }
 
   .hero-content h1 {
@@ -130,18 +130,22 @@ section {
   }
 
   .hero-content p {
-    font-size: 0.95rem;
-    line-height: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-top: 12px;
   }
 
   .nav-around-cube {
-    display: none; /* Hide the cube-side nav on mobile */
+    display: none; /* Hide the nav around the cube on mobile */
   }
 
   .contact-icons {
+    position: relative;
+    bottom: auto;
+    transform: none;
+    margin-top: 30px;
     flex-direction: column;
     gap: 10px;
-    bottom: 30px;
   }
 
   .contact-icons h3 {
@@ -150,13 +154,19 @@ section {
   }
 
   .icon-row {
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
     flex-wrap: wrap;
   }
 
   .icon-row img {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
   }
 
   .card,
@@ -169,10 +179,9 @@ section {
   }
 
   .sticky-topbar {
-    padding: 12px 20px;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 12px;
+    padding: 10px 20px;
   }
 
   .sticky-logo {
@@ -183,21 +192,13 @@ section {
     font-size: 0.9rem;
   }
 
-  section h2 {
-    font-size: 1.6rem;
-  }
-
   .scroll-up {
+    top: 20px;
     font-size: 2rem;
     padding: 8px 12px;
-    top: 20px;
   }
 }
-@media (max-width: 768px) {
-  .spline-wrapper {
-    display: none;
-  }
-}
+
 
 
 
