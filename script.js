@@ -39,4 +39,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+function toggleMenu() {
+  const menu = document.getElementById('mobileLinks');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
 
