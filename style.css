@@ -433,6 +433,18 @@ section h2 {
   font-size: 1rem;
   color: #e2e8f0;
 }
+.mobile-links {
+  display: none; /* ⬅️ Prevents fallback display */
+}
+.mobile-links.active {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 10px 20px;
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
@@ -440,7 +452,13 @@ section h2 {
     margin: 0;
     padding: 0 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ✅ makes it vertically centered */
   }
+  
 
   .hero-content h1 {
     font-size: 2rem;
