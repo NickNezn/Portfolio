@@ -123,6 +123,8 @@ section {
     text-align: center;
   }
 
+  
+
   .hero-content h1 {
     font-size: 2rem;
     line-height: 2.4rem;
@@ -603,12 +605,16 @@ section h2 {
 
 .contact-icons {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
+
 
 .contact-icons h3 {
   font-size: 2.2rem;
@@ -802,4 +808,28 @@ section#projects::before {
 section * {
   position: relative;
   z-index: 1;
+}
+
+/* 🧊 Overlay just for hero background, not cube */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for visibility */
+  z-index: 1;
+}
+
+/* Ensure text and icons are above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .contact-icons {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 30px;
+  }
 }
