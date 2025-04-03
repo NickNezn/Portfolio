@@ -24,7 +24,7 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url('pictures/second.jpg') center center / cover no-repeat;
+  background: url('pictures/bg1.jpg') center center / cover no-repeat;
 }
 
 
@@ -245,10 +245,63 @@ section {
     text-shadow: 0 0 6px #38bdf8;
   }
 }
+@media (max-width: 768px) {
+  /* Hide cube background */
+  .spline-wrapper {
+    display: none;
+  }
+
+  /* Hide cube nav */
+  .nav-around-cube {
+    display: none;
+  }
+
+  /* Hide paragraph under name */
+  .hero-content p {
+    display: none;
+  }
+
+  /* Shrink and reposition name */
+  .hero-content {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  /* Space for contact icons */
+  .contact-icons {
+    position: static;
+    margin-top: 30px;
+  }
+
+  /* Make icons smaller */
+  .icon-row img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-row {
+    gap: 20px;
+  }
+
+  /* Hide scroll arrows */
+  .scroll-up {
+    display: none;
+  }
+}
 
 }
 
 
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+  }
+}
 
 
 .nav-around-cube {
