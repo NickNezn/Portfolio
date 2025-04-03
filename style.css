@@ -137,9 +137,12 @@ section {
     margin-top: 12px;
   }
 
-  .nav-around-cube {
-    display: none; /* Hide the nav around the cube on mobile */
-  }
+  
+    .nav-around-cube {
+      display: none !important;
+    }
+  
+  
 
   .contact-icons {
     position: relative;
@@ -368,27 +371,79 @@ section {
   transform: scale(1.05);
   text-shadow: 0 0 10px #38bdf8;
 }
+/* 🛠 Hide mobile links by default */
+.mobile-links {
+  display: none;
+}
+/* ✅ Show only when active (e.g., using a class via JS) */
+.mobile-links.active {
+  display: flex;
+}
 
 section#experience {
   padding: 100px 60px;
-  background: url('pictures/fifth.jpg') center center / cover no-repeat;
+  background: url('pictures/bg2.jpg') center center / cover no-repeat;
   color: white;
-  text-align: left;
+  text-align: center;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 section#experience::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5); /* Slight overlay for text readability */
   z-index: -1;
 }
 
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.experience-entry {
+  background-color: rgba(15, 23, 42, 0.8);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.experience-entry h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #f1f5f9;
+  margin-bottom: 12px;
+}
+
+.experience-entry p {
+  font-style: italic;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.experience-entry ul {
+  padding-left: 20px;
+  color: #e2e8f0;
+  line-height: 1.8;
+}
+
+
 section#skills {
   padding: 100px 60px;
-  background: url('pictures/third.jpg') center center / cover no-repeat;
+  background: url('pictures/bg5.jpg') center center / cover no-repeat;
   color: white;
   text-align: right;
   position: relative;
@@ -405,7 +460,7 @@ section#skills::before {
 
 section#projects {
   padding: 100px 60px;
-  background: url('pictures/fourth.jpg') center center / cover no-repeat;
+  background: url('pictures/bg4.jpg') center center / cover no-repeat;
   color: white;
   text-align: center;
   position: relative;
@@ -832,4 +887,101 @@ section * {
     transform: none;
     margin-top: 30px;
   }
+}
+.project-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  border-radius: 14px;
+  margin: 40px auto;
+  max-width: 1000px;
+  gap: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+}
+
+.project-img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-text h3 a {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.project-text h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-text p {
+  color: #e2e8f0;
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .project-img {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .project-text h3 a {
+    font-size: 1.4rem;
+  }
+}
+.skills-section {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.skill-box {
+  background-color: rgba(15, 23, 42, 0.8);
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
 }
