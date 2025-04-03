@@ -1,22 +1,20 @@
-// Initialize AOS
+// Initialize AOS animations
 AOS.init({
   duration: 1000,
   once: true
 });
 
-// Smooth scroll for nav links
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
 
-    // Get target position
     const targetPosition = target.getBoundingClientRect().top + window.scrollY;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1200; // ⬅️ Slow it down here (ms)
+    const duration = 1200;
     let startTime = null;
 
     function animation(currentTime) {
@@ -27,7 +25,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    // Ease function for smoother movement
     function easeInOutQuad(t, b, c, d) {
       t /= d / 2;
       if (t < 1) return c / 2 * t * t + b;
@@ -39,8 +36,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Mobile nav toggle
 function toggleMenu() {
   const menu = document.getElementById('mobileLinks');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  menu.classList.toggle('active');
 }
-

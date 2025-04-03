@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- ✅ Sticky Topbar (logo + CV) -->
+  <!-- Sticky Topbar (Logo + CV) -->
   <div class="sticky-topbar">
     <div class="sticky-logo">Nicolas<span>.</span></div>
     <div class="cv-dropdown">
@@ -25,8 +25,10 @@
     </div>
   </div>
 
-  <!-- 🔽 Hero Section -->
-  <header class="hero">
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <a href="#experience" class="scroll-down" title="Scroll to Experience">↓</a>
+
     <nav class="navbar">
       <div class="logo">Nicolas<span>.</span></div>
     </nav>
@@ -50,15 +52,9 @@
     <div class="contact-icons">
       <h3>CONTACT</h3>
       <div class="icon-row">
-        <a href="https://www.linkedin.com/in/nicolas-neznik-7301671b2/" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://www.instagram.com/nicolasneznik/" target="_blank">
-          <img src="icons/instagram.png" alt="Instagram" />
-        </a>
-        <a href="mailto:neznikn@gmail.com">
-          <img src="icons/gmail.png" alt="Gmail" />
-        </a>
+        <a href="https://www.linkedin.com/in/nicolas-neznik-7301671b2/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/nicolasneznik/" target="_blank"><img src="icons/instagram.png" alt="Instagram" /></a>
+        <a href="mailto:neznikn@gmail.com"><img src="icons/gmail.png" alt="Gmail" /></a>
       </div>
     </div>
 
@@ -74,12 +70,13 @@
     </div>
   </header>
 
-  <div id="home"></div>
-
+  <!-- Experience Section -->
   <section id="experience" data-aos="fade-up">
+    <a href="#skills" class="scroll-down" title="Scroll to Skills">↓</a>
+
     <a href="#home" class="scroll-up" title="Back to top">↑</a>
     <h2>Experience</h2>
-  
+
     <div class="experience-grid">
       <div class="experience-entry">
         <h3>Test Automation Specialist – Raiffeisen Bank International AG</h3>
@@ -91,26 +88,27 @@
           <li>Reduced testing time significantly through process optimization.</li>
         </ul>
       </div>
-  
+
       <div class="experience-entry">
         <h3>Web Developer & Marketing – Naomi s.r.o.</h3>
         <p><em>2015 – Present</em></p>
         <ul>
-          <li>Built and maintained company website</li>
-            <li> trough wordpress and custom html/css and javascript.</li>
+          <li>Built and maintained company website through WordPress and custom HTML/CSS/JavaScript.</li>
           <li>Managed Facebook/Instagram marketing.</li>
           <li>Handled customer service and communications.</li>
         </ul>
       </div>
     </div>
   </section>
-  
 
+  <!-- Skills Section -->
   <section id="skills" class="skills-section" data-aos="fade-left">
+    <a href="#projects" class="scroll-down" title="Scroll to Projects">↓</a>
+
     <a href="#experience" class="scroll-up" title="Back to previous section">↑</a>
     <h2>Skills</h2>
     <div class="skills-grid">
-     <div class="skill-box">SQL</div>
+      <div class="skill-box">SQL</div>
       <div class="skill-box">Java</div>
       <div class="skill-box">HTML & CSS</div>
       <div class="skill-box">JavaScript</div>
@@ -120,18 +118,16 @@
       <div class="skill-box">Mobile Testing</div>
       <div class="skill-box">Web Testing</div>
       <div class="skill-box">CI/CD</div>
-      <div class="skill-box">Wordpress</div>
+      <div class="skill-box">WordPress</div>
       <div class="skill-box">Web Development</div>
     </div>
   </section>
-  
 
+  <!-- Projects Section -->
   <section id="projects" data-aos="fade-right">
-
     <a href="#skills" class="scroll-up" title="Back to previous section">↑</a>
-  
     <h2>Projects</h2>
-  
+
     <div class="project-card">
       <img src="pictures/cs.PNG" alt="Kvetynaomi Project" class="project-img">
       <div class="project-text">
@@ -143,7 +139,7 @@
         </p>
       </div>
     </div>
-    
+
     <div class="project-card">
       <img src="pictures/Capture.PNG" alt="Flappy Bird Project" class="project-img">
       <div class="project-text">
@@ -154,8 +150,9 @@
         </p>
       </div>
     </div>
-    
   </section>
+
+  <!-- Mobile Menu -->
   <div class="mobile-menu">
     <div class="burger" onclick="toggleMenu()">☰</div>
     <div class="mobile-links" id="mobileLinks">
@@ -165,7 +162,6 @@
       <a href="#projects">// projects</a>
     </div>
   </div>
-  
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
