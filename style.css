@@ -119,9 +119,86 @@ section {
 
 @media (max-width: 768px) {
   .hero-content {
-    margin-top: -40px;
+    margin-top: -100px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    padding: 0 20px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .nav-around-cube {
+    display: none;
+  }
+
+  .section,
+  .left-align-section,
+  .right-align-section {
+    padding: 60px 20px;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .skills-card,
+  .card,
+  .project-entry,
+  .experience-entry {
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .card h3 a,
+  .project-entry h3 a,
+  .experience-entry h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p,
+  .project-entry p,
+  .experience-entry p,
+  .skills-list li {
+    font-size: 1rem;
+  }
+
+  .icon-row {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .icon-row img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sticky-topbar {
+    padding: 10px 20px;
+  }
+
+  .sticky-logo {
+    font-size: 1.2rem;
+  }
+
+  .cv-label {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .scroll-up {
+    font-size: 2.2rem;
+    padding: 8px 12px;
   }
 }
+
+
 .nav-around-cube {
   position: absolute;
   top: 55%; /* move it further down (originally 50%) */
@@ -367,16 +444,20 @@ section h2 {
 }
 
 section {
-  min-height: 100vh;               /* 👈 Ensure section is AT LEAST full screen */
-  width: 100vw;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;         /* ⬆️ Vertically center the section */
-  padding: 60px;
-  box-sizing: border-box;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 60px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
+
 
 
 
@@ -576,3 +657,44 @@ section h2 {
   top: 0;
 }
 
+section#projects {
+  text-align: center;
+  align-items: center;
+  padding: 100px 60px;
+  background: url('pictures/bg.jpg') center center / cover no-repeat;
+  color: white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* adjust opacity here */
+  z-index: 0;
+}
+
+section#projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+/* Override card size inside #projects */
+#projects .card {
+  max-width: 900px;
+  font-size: 1.1rem;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  text-align: left;
+}
+section * {
+  position: relative;
+  z-index: 1;
+}
