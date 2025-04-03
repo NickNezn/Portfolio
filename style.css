@@ -116,54 +116,37 @@ section {
   color: white;
   text-align: center;
 }
-
 @media (max-width: 768px) {
   .hero-content {
-    margin-top: -100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 20px;
   }
 
   .hero-content h1 {
-    font-size: 2.2rem;
-    padding: 0 20px;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    word-break: break-word;
   }
 
   .hero-content p {
-    font-size: 1rem;
-    padding: 0 20px;
+    font-size: 0.95rem;
+    line-height: 1.3rem;
   }
 
   .nav-around-cube {
-    display: none;
+    display: none; /* Hide the cube-side nav on mobile */
   }
 
-  .section,
-  .left-align-section,
-  .right-align-section {
-    padding: 60px 20px;
-    align-items: center !important;
-    text-align: center !important;
+  .contact-icons {
+    flex-direction: column;
+    gap: 10px;
+    bottom: 30px;
   }
 
-  .skills-card,
-  .card,
-  .project-entry,
-  .experience-entry {
-    padding: 20px;
-    margin: 20px 0;
-    max-width: 100%;
-  }
-
-  .card h3 a,
-  .project-entry h3 a,
-  .experience-entry h3 {
+  .contact-icons h3 {
     font-size: 1.3rem;
-  }
-
-  .card p,
-  .project-entry p,
-  .experience-entry p,
-  .skills-list li {
-    font-size: 1rem;
+    letter-spacing: 2px;
   }
 
   .icon-row {
@@ -172,16 +155,28 @@ section {
   }
 
   .icon-row img {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .card,
+  .skills-card,
+  .project-entry,
+  .experience-entry {
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 100%;
   }
 
   .sticky-topbar {
-    padding: 10px 20px;
+    padding: 12px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .sticky-logo {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .cv-label {
@@ -189,14 +184,21 @@ section {
   }
 
   section h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .scroll-up {
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 8px 12px;
+    top: 20px;
   }
 }
+@media (max-width: 768px) {
+  .spline-wrapper {
+    display: none;
+  }
+}
+
 
 
 .nav-around-cube {
