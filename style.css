@@ -484,15 +484,19 @@ section h2 {
     font-size: 0.9rem;
     top: 55%;
   }
+  @media (max-width: 768px) {
+    .scroll-up,
+    .scroll-down {
+      display: none;
+    }
+  }
   
 
   .hero-content h1 {
     font-size: 2.4rem;
   }
 
-  .hero-content p {
-    display: none;
-  }
+  
 
   .spline-wrapper,
   .nav-around-cube {
