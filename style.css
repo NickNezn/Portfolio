@@ -472,99 +472,51 @@ section h2 {
 }
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 120px; /* adjust spacing */
+    height: auto;
+  }
+
   .hero-content {
-    margin: 0;
+    position: static;
+    transform: none;
     padding: 0 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-size: 0.9rem;
-    top: 40% !important; /* move up */
-    transform: translate(-50%, -40%) !important;
-    
   }
-  
-    .scroll-up,
-    .scroll-down {
-      display: none;
-    }
-  
-  
 
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
   }
 
   .hero-content p {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
-  
+
+  .contact-icons {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .scroll-up,
+  .scroll-down {
+    display: none;
+  }
 
   .spline-wrapper,
   .nav-around-cube {
-    display: none;
+    display: none !important;
   }
-  
-
-  
-  .project-card {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .project-img {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-
-  
-  /* Fix CONTACT section */
-  .contact-icons {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    margin-top: 30px;
-  }
-
-  .contact-icons h3 {
-    font-size: 1.8rem;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-  }
-
-  .icon-row {
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .icon-row img {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* Move down-arrow away from text */
-  .scroll-down {
-    position: absolute;
-    left: 20px;
-    bottom: 80px;
-    font-size: 2.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 14px;
-    border-radius: 50%;
-    z-index: 30;
-  }
-/* 🔧 Mobile Menu (only visible on mobile) */
-
 
   .mobile-menu {
     display: flex;
@@ -575,6 +527,7 @@ section h2 {
     flex-direction: column;
     align-items: flex-end;
   }
+
   .burger {
     font-size: 2rem;
     color: #38bdf8;
@@ -608,12 +561,8 @@ section h2 {
     color: #38bdf8;
     text-shadow: 0 0 8px #38bdf8;
   }
-
-  /* ✅ hide nav-around-cube for mobile */
-  .nav-around-cube {
-    display: none !important;
-  }
 }
+
 
 
 
