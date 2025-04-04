@@ -490,15 +490,99 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
+  
+  /* Fix CONTACT section */
   .contact-icons {
-    position: static;
-    margin-top: 30px;
+    position: relative;
+    margin-top: 60px;
+    text-align: center;
+    left: 0;
+    transform: none;
+  }
+
+  .contact-icons h3 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  .icon-row {
+    justify-content: center;
+    gap: 30px;
   }
 
   .icon-row img {
     width: 40px;
     height: 40px;
   }
+
+  /* Move down-arrow away from text */
+  .scroll-down {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 14px;
+    border-radius: 50%;
+    z-index: 30;
+  }
+/* 🔧 Mobile Menu (only visible on mobile) */
+
+
+  .mobile-menu {
+    position: fixed;
+    top: 75px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .burger {
+    font-size: 2rem;
+    color: #38bdf8;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-links a:hover {
+    color: #38bdf8;
+    text-shadow: 0 0 8px #38bdf8;
+  }
+
+  /* ✅ hide nav-around-cube for mobile */
+  .nav-around-cube {
+    display: none !important;
+  }
+}
+
+
+.mobile-menu {
+  display: none;
 }
 .scroll-up,
 .scroll-down {
