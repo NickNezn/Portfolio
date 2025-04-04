@@ -470,8 +470,6 @@ section h2 {
 .mobile-menu {
   display: none;
 }
-/* MOBILE RESPONSIVE */
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -607,6 +605,7 @@ section h2 {
     font-size: 0.95rem;
   }
 }
+
 
 
 
