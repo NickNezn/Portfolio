@@ -163,6 +163,22 @@
     <a href="#projects">// projects</a>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  function toggleMenu() {
+    const menu = document.getElementById('mobileLinks');
+    menu.classList.toggle('active');
+  }
+
+  document.querySelectorAll('.mobile-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileLinks').classList.remove('active');
+    });
+  });
+</script>
+<script src="script.js"></script>
 
 
 </body>
