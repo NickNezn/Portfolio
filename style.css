@@ -81,7 +81,7 @@ section h2 {
   z-index: 2;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 40%; /* 👈 raise the hero text */
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 20px;
@@ -90,6 +90,7 @@ section h2 {
   justify-content: center;
   align-items: center;
 }
+
 
 
 
@@ -149,7 +150,7 @@ section h2 {
 
 .nav-around-cube {
   position: absolute;
-  top: 55%;
+  top: 60%; /* 👈 move it a bit lower to free space */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -160,6 +161,7 @@ section h2 {
   z-index: 3;
   pointer-events: none;
 }
+
 
 .nav-left, .nav-right {
   display: flex;
@@ -182,7 +184,7 @@ section h2 {
   font-weight: 700;
   text-decoration: none;
   color: white;
-  line-height: 8.5rem;
+  line-height: 5.5rem;
   letter-spacing: 0.5px;
   transition: 0.3s ease;
 }
