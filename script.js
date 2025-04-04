@@ -41,3 +41,8 @@ function toggleMenu() {
   const menu = document.getElementById('mobileLinks');
   menu.classList.toggle('active');
 }
+document.querySelectorAll('.mobile-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileLinks').classList.remove('active');
+  });
+});
