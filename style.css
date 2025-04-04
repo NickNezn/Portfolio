@@ -482,20 +482,26 @@ section h2 {
     align-items: center;
     height: 100vh;
     font-size: 0.9rem;
-    top: 55%;
+    top: 40% !important; /* move up */
+    transform: translate(-50%, -40%) !important;
+    
   }
-  @media (max-width: 768px) {
+  
     .scroll-up,
     .scroll-down {
       display: none;
     }
-  }
+  
   
 
   .hero-content h1 {
     font-size: 2.4rem;
   }
 
+  .hero-content p {
+    display: block;
+    font-size: 0.9rem;
+  }
   
 
   .spline-wrapper,
@@ -524,10 +530,10 @@ section h2 {
   /* Fix CONTACT section */
   .contact-icons {
     position: relative;
-    margin-top: 60px;
-    text-align: center;
-    left: 0;
+    bottom: auto;
+    left: auto;
     transform: none;
+    margin-top: 30px;
   }
 
   .contact-icons h3 {
