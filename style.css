@@ -515,7 +515,7 @@ section h2 {
   .contact-icons {
     position: static;
     transform: none;
-    margin-top: 0;
+    margin-top: 40px;
     padding-bottom: 20px;
   }
 
