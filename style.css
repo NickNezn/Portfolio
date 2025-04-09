@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* prevent horizontal scroll */
-  outline: 1px solid red;
+  outline: 1px solid red; /* ✅ Keep temporarily */
 }
+
 
 
 html, body {
@@ -619,6 +619,28 @@ section h2 {
   .project-text p {
     font-size: 0.95rem;
   }
+
+  .sticky-topbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .sticky-logo {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+  }
+  .cv-dropdown {
+    align-items: center;
+    width: 100%;
+  }
+  .cv-label {
+    justify-content: center;
+  }
+  
 }
 
 
