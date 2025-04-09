@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden; /* prevent horizontal scroll */
+  outline: 1px solid red;
 }
 
 
