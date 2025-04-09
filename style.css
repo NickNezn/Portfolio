@@ -490,21 +490,23 @@ section h2 {
   .hero-content {
     position: relative;
     top: 0;
+    left: 0;
     transform: none;
     width: 100%;
-    max-width: 100%;
     padding: 0 20px;
     text-align: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
   }
   
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     line-height: 1.3;
     word-break: break-word;
     max-width: 100%;
-    text-align: center;
   }
   
   .hero-content p {
@@ -512,8 +514,8 @@ section h2 {
     line-height: 1.5;
     max-width: 100%;
     word-break: break-word;
-    text-align: center;
   }
+  
   
   
 
